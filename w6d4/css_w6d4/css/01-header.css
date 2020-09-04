@@ -1,0 +1,60 @@
+/* PHASE 1: Header */
+
+body {
+    font-family: 'Kumbh Sans', sans-serif; 
+}
+
+.header {
+    background-color: red;
+    height: 50px;   
+    color: whitesmoke;
+    /* display: flex;
+    justify-content: flex-start; */
+}
+
+.header a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.header-logo {
+    color: whitesmoke;
+}
+
+.header-logo:hover {
+  background-color: black;
+}
+
+.header-list:hover {
+  background-color: black;
+}
+
+.header-nav{
+    /* color: whitesmoke; */
+    display: flex; 
+    justify-content: flex-between; 
+    margin: 0 auto;
+}
+
+.header-list {
+    /* color: whitesmoke; */
+    display: flex;
+    /* justify-content: space-around;
+    position: relative; */
+}
+
+main {
+    background-color:lightpink;
+    height: 150px;
+}
+
+footer {
+    background-color: green;
+    height: 20px;
+}
+
+.badge {
+    border-radius: 100%;
+}
+
+
