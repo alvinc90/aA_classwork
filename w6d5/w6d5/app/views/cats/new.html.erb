@@ -1,0 +1,36 @@
+<h1> This Is Where You Create A Kit-Kat </h1>
+
+<form action="<%= cats_url %>" method="POST"> 
+<br>
+    <label for="name">Name:
+        <input type="text" name="cat[name]" value="<%= @cat.name %>">
+    </label>  
+<br>
+    <label for="color">Color:
+        <select name="cat[color]">
+            <option disabled selected>--This Is Default--</option>
+            <option value="white">white</option>
+            <option value="orange">orange</option>
+            <option value="brown">brown</option>
+            <option value="black">black</option>
+            <option value="polka-dot">polka-dot</option>
+        </select>
+    </label>
+<br>
+    <label for="sex">Sex
+        <input type="radio" name="cat[sex]" value="M"> Male
+        <input type="radio" name="cat[sex]" value="F"> Female
+    </label>
+<br>
+
+<!-- Cat.new(name, color, birth_date = "dd-mm-yyyy") "birth_date"=>"yyyy-mm-dd" -->
+    <label for="birthday">Birth-Date:
+        <input type="date" name="cat[birth_date]" value="2017-06-01">
+    </label>
+<br>
+    <label for="description">Description:</label><br> 
+    <textarea name="cat[description]">
+    </textarea>
+<br>
+    <input type="submit" value="Create Kitty Kat">
+</form>
