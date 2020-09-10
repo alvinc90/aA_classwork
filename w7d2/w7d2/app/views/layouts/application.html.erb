@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>W7d2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head> 
+
+  <body>
+  <header class="head">
+    <h1 class="stuff">Music App</h1>
+
+    <div>
+      <% if logged_in? %>
+          <form action="<%=sessions_url%>" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>%">
+            <input type="submit" class="button" value="Log Out!"> 
+          </form>
+      <% end %>
+    </div> 
+    
+  </header>
+    <%= yield %>
+    <% if flash[:errors] %>
+        <% flash[:errors].each do |error| %>
+        <%= error %>
+         <% end %>
+    <% end %>
+  </body>
+</html>
+
+
