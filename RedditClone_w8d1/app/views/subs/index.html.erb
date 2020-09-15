@@ -1,0 +1,13 @@
+<h1>These are all the forums:</h1>
+
+<ul>
+    <% @subs.each do |sub| %>
+        <li>
+            <a href="<%= sub_url(sub) %>"><%= sub.title %></a>
+            <br>
+            <%= sub.description %>
+        </li>
+    <% end %>
+</ul>
+
+<a href="<%= new_sub_url %>">Create a new forum</a> 

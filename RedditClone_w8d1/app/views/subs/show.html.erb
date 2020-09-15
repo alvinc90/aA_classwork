@@ -1,0 +1,15 @@
+<h2>This is the <%= @sub.title %> page!</h2>
+<h4>by: <%= @sub.moderator.username %></h4> 
+<p><%= @sub.description %></p> 
+<h5>Posts:</h5>
+<ul>
+    <% @sub.posts.each do |post| %>
+        <li>
+            <a href="<%= post_url(post) %>"><%= post.title %></a>
+        </li>
+    <% end %>
+</ul>
+
+<a href="<%= subs_url %>">See all forums</a> 
+<br>
+<a href="<%= edit_sub_url(@sub) %>">Edit your forum</a> 
